@@ -9,8 +9,8 @@ from rest_framework.routers import DefaultRouter
 from core.views import CategoriaViewSet, EditoraViewSet
 
 router = DefaultRouter()
-router.register(r'categorias', CategoriaViewSet)
-router.register(r'editoras', EditoraViewSet)
+router.register(r'categorias', CategoriaViewSet, basename="categorias")
+router.register(r'editoras', EditoraViewSet, basename="editoras")
 
 urlpatterns = [
     path('admin/', admin.site.urls),

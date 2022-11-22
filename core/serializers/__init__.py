@@ -1,5 +1,3 @@
-from .CategoriaSerializer import CategoriaSerializer
-from .EditoraSerializer import EditoraSerializer
-from .LivroSerializer import LivroSerializer, LivroDetailSerializer
-
-
+from .categoria import CategoriaSerializer
+from .editora import EditoraSerializer
+from .livro import LivroDetailSerializer, LivroSerializer

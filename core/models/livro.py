@@ -1,5 +1,5 @@
 from django.db import models
-
+from uploader.models import Image
 from core.models import Autor, Categoria, Editora
 
 
@@ -9,6 +9,14 @@ class Livro(models.Model):
     quantidade = models.IntegerField()
     preco = models.DecimalField(max_digits=7, decimal_places=2)
     autores = models.ManyToManyField(Autor, related_name="livros")
+    capa = models.ForeignKey(
+        Image,
+        related_name="+",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        default=None,
+    )
     categoria = models.ForeignKey(
         Categoria, on_delete=models.PROTECT, related_name="livros"
     )

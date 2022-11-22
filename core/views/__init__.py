@@ -1,2 +1,2 @@
-from .CategoriaViewSet import Categoria
-from .EditoraViewSet import Editora
+from .categoria import CategoriaViewSet
+from .editora import EditoraViewSet
